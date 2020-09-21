@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <!-- o ">" indicar um elemento dentro da pasta partials, em seguida adicionamos o
+    nome do arquivo(_navbar, nele está a nav que deve estar em todas paginas)-->
+    {{>_navbar}}
+    <div class="container">
+    {{{ body }}}
+    </div>
+    <script src="/BLOGAPP/public/script.js"></script>
+</body>
+</html>

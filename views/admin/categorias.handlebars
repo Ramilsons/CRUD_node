@@ -1,0 +1,23 @@
+{{#each erros}}
+    <div class="alert">{{texto}}</div>
+{{/each}}
+
+<div class="centro">
+    <h2>Lista de Categorias</h2>
+    <a class="btn_link" href="/admin/categorias/add"><button>Nova Categoria</button></a>
+</div>
+<div class="main">
+    {{#each categorias}}
+        <div class="card">
+            <div class="parte1">
+                <h4>{{this.nome}}</h4>
+                <small>{{this.slug}}</small>
+            </div>
+            <a href="/admin/categorias/edit/{{_id}}"><button class="btn-edit">Editar</button></a>
+            <form action="/admin/categorias/deletar" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn-deletar">Deletar</button>
+            </form>
+        </div>
+    {{/each}}
+</div>

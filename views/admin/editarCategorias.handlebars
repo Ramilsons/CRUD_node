@@ -1,0 +1,14 @@
+
+<form action="/admin/categorias/edit" method="post" class="form_add">
+    <input type="hidden" name="id" value="{{categoria._id}}">
+    <label for="nome" class="label_add">Nome:</label>
+    <input type="text" id="nome" name="nome" placeholder="Nome da Categoria" class="input_add" value="{{categoria.nome}}">
+
+    <label for="slug" class="label_add">Slug:</label>
+    <input type="text" id="slug" name="slug" placeholder="endereço do link para achar essa categoria" class="input_add" value="{{categoria.slug}}">
+
+    <button type="submit" class="btn_add">Editar Categoria</button>
+</form>
+{{#each erros}}
+    <div class="alert">{{texto}}</div>
+{{/each}}
